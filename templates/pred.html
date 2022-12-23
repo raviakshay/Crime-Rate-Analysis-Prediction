@@ -8,7 +8,8 @@
         <link rel="stylesheet" href="/static/accordion.css">
         <link rel="stylesheet" href="/static/animate.css">
        
-                
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
         
 	</head>
 
@@ -17,7 +18,7 @@
 
             <header class = "header1">
                     <div class = "box1">
-                        <a href="home.html"><img src="{{url_for('static', filename='images/logo_trial.png')}}" height = "115vh" width = "90%" alt="Banner Image"/></a>
+                        <a href="home.html"><img src="{{url_for('static', filename='images/home.jpg')}}" height = "115vh" width = "90%" alt="Banner Image"/></a>
                     </div>
                     <div class = "box2">
                         <h1>Indian <span class="highlight">Crime</span> Analysis</h1>
@@ -52,6 +53,8 @@
 		  	                <form action="women.html" method="POST">
                             <h3 style = "font-family:verdana; padding-left: 0%; text-align:left">Select the year, crime type and state of your choice for appropriate predictions:</h3><br>
                             
+
+            
                             <select name = "Predict_Year" style="padding-top:20px;">
                                 <option value="2016"><h2>Select Year</h2> </option>
                                 <option value="2017"><h2>2017</h2> </option>
@@ -115,9 +118,15 @@
                                 </select>
 
 		  	                <br>
-		  	                <input type="submit" value="Submit">
+                            <br>
+
+                              <button type="submit" value="Submit" class="btn btn-primary">SUBMIT</button>
+
+		  	                <!-- <input type="submit" value="Submit"> -->
                             </form>
                     </center>   
+                    <br>
+
                 </section>
             
                 <section id="menu2">
@@ -190,10 +199,12 @@
                                 <option value="Puducherry"><h2>Puducherry</h2> </option>
                             </select>
                             <br>
-
-                                <input type="submit" value="Submit">
-                              </form>
-                      </center>    
+<br>
+                            <button type="submit" value="Submit" class="btn btn-primary">SUBMIT</button>
+                        </form>
+                      </center>   
+                      <br>
+ 
                 </section>
             
                 
@@ -282,9 +293,14 @@
                                 <option value="Puducherry"><h2>Puducherry</h2> </option>
                                 </select>
                                 <br>
-                                <input type="submit" value="Submit">
-                              </form>
-                      </center>     
+
+                                <br>
+                                <button type="submit" value="Submit" class="btn btn-primary">SUBMIT</button>
+                            </form>
+                      </center>   
+                      
+                      <br>
+
                 </section>
             
                 <section id="menu5">
@@ -369,24 +385,27 @@
 
                                 </select>
                                 <br>
-                                <input type="submit" value="Submit">
-                              </form>
+
+                                <br>
+                                <button type="submit" value="Submit" class="btn btn-primary">SUBMIT</button>
+                            </form>
                       </center>    
+                      <br>
+
                 </section>
             </div>
     </div>
+
+
 </section>
         
 
-    
+  <br>
 
 
-
-        <footer>
-            <p>Indian Crime Analysis, Copyright &copy; 2018</p>
-            <img src="/static/images/indiagov.png" id="IG">
-
-		</footer>
+<footer>
+  
+         </footer>
 	</body>
 
 </html>
