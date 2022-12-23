@@ -206,8 +206,8 @@ header a:hover{
 }
 #section6 .imgViz{
 	float:right;
-	padding-right: 50px;
-	margin-top:50px;
+	padding-right: 20px;
+	margin-top:10px;
 	
 	
 }
@@ -369,7 +369,6 @@ footer{
 	border-top:black 3px solid;
 }
 footer p {
-	float: left;
 	background: bisque;
 	position: relative; top:-25px;
 }
@@ -379,7 +378,10 @@ footer p {
 	position: relative; top:-40px;
 }
 
-
+#menu1 a,#menu2 a,#menu3 a,#menu4 a,#menu5 a{
+	text-decoration: none;
+	color: aqua;
+}
 
 
 
