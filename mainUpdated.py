@@ -5,7 +5,7 @@ import numpy as np
 from flask import json
 from sklearn import preprocessing
 from sklearn.linear_model import LinearRegression
-from sklearn.externals import joblib
+import joblib
 from sklearn.ensemble import RandomForestRegressor
 from plotly.offline import init_notebook_mode, iplot
 
@@ -72,7 +72,7 @@ def women():
 	regressor = LinearRegression()		#regression algorithm cealled.
 	regressor.fit(X.reshape(-1,1),y)	#Data set is fitted in regression and Reshaped it.
 	accuracy = regressor.score(X.reshape(-1,1),y)	#Finding Accuracy of Predictions.
-	print accuracy
+	print(accuracy)
 	accuracy_max = 0.65
 
 	#Trending year(Influence Year) finding algorithm.
@@ -86,11 +86,11 @@ def women():
 			accuracy = regressor.score(X.reshape(-1,1),y)
 			if (accuracy > accuracy_max):
 				accuracy_max = accuracy
-				print accuracy_max
+				print(accuracy_max)
 				trendChangingYear = a
-	print trendChangingYear			#Printing Trend Changing Year on server terminal.
-	print test[trendChangingYear]
-	print xTrain[trendChangingYear-2]
+	print(trendChangingYear)			#Printing Trend Changing Year on server terminal.
+	print(test[trendChangingYear])
+	print(xTrain[trendChangingYear-2])
 	year = int(year)
 	y = test[2:]
 	b = []
@@ -156,7 +156,7 @@ def children():
 	regressor = LinearRegression()		#regression Algorithm Called.
 	regressor.fit(X.reshape(-1,1),y)	#Data set is fitted in regression and Reshaped it.
 	accuracy = regressor.score(X.reshape(-1,1),y)	#Finding Accuracy of Prdictions.
-	print accuracy
+	print(accuracy)
 	accuracy_max = 0.65
 	if(accuracy < 0.65):
 		for a in range(3,l-4):
@@ -168,11 +168,11 @@ def children():
 			accuracy = regressor.score(X.reshape(-1,1),y)
 			if (accuracy > accuracy_max):
 				accuracy_max = accuracy
-				print accuracy_max
+				print(accuracy_max)
 				trendChangingYear = a
-	print trendChangingYear			#Printing Trend Changing Year on server terminal.
-	print test[trendChangingYear]
-	print xTrain[trendChangingYear-2]
+	print(trendChangingYear)			#Printing Trend Changing Year on server terminal.
+	print(test[trendChangingYear])
+	print(xTrain[trendChangingYear-2])
 	yTrain = test[trendChangingYear:]
 	xTrain = xTrain[trendChangingYear-2:]
 	regressor.fit(xTrain.reshape(-1,1),yTrain)
@@ -238,7 +238,7 @@ def ipc():
 	regressor.fit(X.reshape(-1,1),y)	#Data set is fitted in regression and Reshaped it.
 	accuracy = regressor.score(X.reshape(-1,1),y)	#Finding Accuracy of Prdictions.
 
-	print accuracy
+	print(accuracy)
 	accuracy_max = 0.65
 
 	#Trending year(Influence Year) finding algorithm.
@@ -252,11 +252,11 @@ def ipc():
 			accuracy = regressor.score(X.reshape(-1,1),y)
 			if (accuracy > accuracy_max):
 				accuracy_max = accuracy
-				print accuracy_max
+				print(accuracy_max)
 				trendChangingYear = a
-	print trendChangingYear				#Printing Trend Changing Year on server terminal.
-	print test[trendChangingYear]
-	print xTrain[trendChangingYear-2]
+	print(trendChangingYear)				#Printing Trend Changing Year on server terminal.
+	print(test[trendChangingYear])
+	print(xTrain[trendChangingYear-2])
 	year = int(year)
 	y = test[2:]
 	b = []
@@ -322,7 +322,7 @@ def sll():
 	regressor = LinearRegression()		#regression Algorithm Called.
 	regressor.fit(X.reshape(-1,1),y)	#Data set is fitted in regression and Reshaped it.
 	accuracy = regressor.score(X.reshape(-1,1),y)	#Finding Accuracy of Prdictions.
-	print accuracy
+	print(accuracy)
 	accuracy_max = 0.65
 
 	#Trending year(Influence Year) finding algorithm.
@@ -336,11 +336,11 @@ def sll():
 			accuracy = regressor.score(X.reshape(-1,1),y)
 			if (accuracy > accuracy_max):
 				accuracy_max = accuracy
-				print accuracy_max
+				print(accuracy_max)
 				trendChangingYear = a
-	print trendChangingYear				#Printing Trend Changing Year on server terminal.
-	print test[trendChangingYear]
-	print xTrain[trendChangingYear-2]
+	print(trendChangingYear)				#Printing Trend Changing Year on server terminal.
+	print(test[trendChangingYear])
+	print(xTrain[trendChangingYear-2])
 	year = int(year)
 	y = test[2:]
 	b = []
